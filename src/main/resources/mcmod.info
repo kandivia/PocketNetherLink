@@ -1,7 +1,7 @@
 [
 {
   "modid": "pocketnether",
-  "name": "Pocket Nether Mod",
+  "name": "Pocket Nether Link Mod",
   "description": "Never Venture to the Nether Again!",
   "version": "$version",
   "mcversion": "${mcversion}",

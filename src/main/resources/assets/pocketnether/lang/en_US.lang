@@ -1,3 +1,3 @@
-itemGroup.PocketNether=Pocket Nether
-tile.overworldQuartzOre.name=Quartz Ore
-item.netherLink.name=Pocket Nether Link
+itemGroup.PocketNetherTab=Pocket Nether
+tile.overworld_quartz_ore.name=Quartz Ore
+item.nether_link.name=Pocket Nether Link

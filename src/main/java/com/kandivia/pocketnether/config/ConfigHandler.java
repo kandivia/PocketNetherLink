@@ -1,17 +1,18 @@
-package com.kandivia.pocketnether.helper;
+package com.kandivia.pocketnether.config;
 
 import java.io.File;
+
+import com.kandivia.pocketnether.main.Reference;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 
 public class ConfigHandler {
-	
+		
 	public static void init(File configFile){
-		Configuration config = new Configuration(configFile);		
+		Configuration config = new Configuration(configFile);			
 		try{
 			config.load();
-			
 		//General Config
 			Property altLinkProp = config.get("General", "enableAltLinkRecipe", false);
 			altLinkProp.comment = "Set this to true to have the Pocket Nether Link recipe use eight Obsidian instead of four.";
