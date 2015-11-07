@@ -1,0 +1,16 @@
+[
+{
+  "modid": "pocketnether",
+  "name": "Pocket Nether Mod",
+  "description": "Never Venture to the Nether Again!",
+  "version": "$version",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["kandivia"],
+  "credits": "MC Forge",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
