@@ -1,15 +1,17 @@
-package com.kandivia.pocketnether.helper;
+package com.kandivia.pocketnether.config;
 
 import java.io.File;
+
+import com.kandivia.pocketnether.main.Reference;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 
-public class ConfigHandler {
+public class ConfigReader {
 	
-	public static void init(File configFile){
+	public static void init(File configFile) {
 		Configuration config = new Configuration(configFile);		
-		try{
+		try {
 			config.load();
 			
 		//General Config
@@ -46,9 +48,9 @@ public class ConfigHandler {
 			maxYProp.comment = "Maximum Y-Level for Quartz Ore to spawn.";
 			Reference.maxY = maxYProp.getInt(30);
 			
-		} catch (Exception e){
+		} catch(Exception e) {
 			System.out.println("PocketNether: Failed to Load Config File!");			
-		}finally{
+		} finally {
 			config.save();
 		}				
 	}

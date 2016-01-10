@@ -1,19 +1,19 @@
 package com.kandivia.pocketnether.items;
 
-import com.kandivia.pocketnether.helper.Reference;
 import com.kandivia.pocketnether.main.MainRegistry;
+import com.kandivia.pocketnether.main.Reference;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class NetherLink extends Item {
-	public NetherLink(){
+	public NetherLink(String name){
 		super();
+		this.setUnlocalizedName(name);
+		this.setTextureName(Reference.MOD_ID + ":" + name);
 		this.maxStackSize = 1;
 		this.setMaxDamage(Reference.netherLinkDurability);
-		this.setNoRepair();
-		this.setUnlocalizedName("netherLink");
-		this.setTextureName(Reference.MOD_ID + ":" + getUnlocalizedName().substring(5));
-		this.setCreativeTab(MainRegistry.tabPocketNether);	
+		this.setNoRepair();		
+		this.setCreativeTab(MainRegistry.PNTab);	
 	}
 }

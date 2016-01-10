@@ -2,7 +2,7 @@ package com.kandivia.pocketnether.event;
 
 import java.util.Random;
 
-import com.kandivia.pocketnether.helper.Reference;
+import com.kandivia.pocketnether.main.Reference;
 
 import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.init.Items;
