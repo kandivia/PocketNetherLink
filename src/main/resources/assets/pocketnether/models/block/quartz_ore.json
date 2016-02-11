@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "pocketnether:blocks/overworld_quartz_ore"
+        "all": "pocketnether:blocks/quartz_ore"
     }
 }

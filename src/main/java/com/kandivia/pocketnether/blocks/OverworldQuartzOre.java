@@ -19,44 +19,43 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class OverworldQuartzOre extends Block{
-	public OverworldQuartzOre(){
+public class OverworldQuartzOre extends Block {
+	public OverworldQuartzOre(String name) {
 		super(Material.rock);
 		this.setHardness(3.0F);
 		this.setResistance(5.0F);
 		this.setStepSound(soundTypeStone);
-		this.setUnlocalizedName("overworld_quartz_ore");
-		this.setCreativeTab(MainRegistry.nLinkTab);
+		this.setUnlocalizedName(name);
+		this.setCreativeTab(MainRegistry.PNTab);
 	}
 	
-	public Item getItemDropped(IBlockState state, Random random, int fortune){
+	public Item getItemDropped(IBlockState state, Random random, int fortune) {
         return Items.quartz;
     }
 
-    public int quantityDropped(Random random){
+    public int quantityDropped(Random random) {
         return 1;
     }
 
-    public int quantityDroppedWithBonus(int fortune, Random random){
-    	if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune)){
+    public int quantityDroppedWithBonus(int fortune, Random random) {
+    	if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune)) {
             int j = random.nextInt(fortune + 2) - 1;
 
-            if (j < 0){
+            if (j < 0) {
                 j = 0;
             }
 
             return this.quantityDropped(random) * (j + 1);
-        }
-    	else{
+        } else {
             return this.quantityDropped(random);
         }
     }
     
     @Override
-    public int getExpDrop(IBlockAccess world, BlockPos pos, int fortune){
+    public int getExpDrop(IBlockAccess world, BlockPos pos, int fortune) {
         IBlockState state = world.getBlockState(pos);
         Random rand = world instanceof World ? ((World)world).rand : new Random();
-        if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)){
+        if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
             return MathHelper.getRandomIntegerInRange(rand, 2, 5);  
         }
         return 0;

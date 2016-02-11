@@ -1,6 +1,5 @@
-package com.kandivia.pocketnether.init;
+package com.kandivia.pocketnether.items;
 
-import com.kandivia.pocketnether.items.NetherLink;
 import com.kandivia.pocketnether.main.Reference;
 
 import net.minecraft.client.Minecraft;
@@ -11,26 +10,25 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class RegisterItems {
 	public static Item nether_link;
 	
-	public static void init(){
+	public static void init() {
 		initItem();
 		registerItem();
 	}
 	
-	public static void initItem(){
-		nether_link = new NetherLink();
+	private static void initItem() {
+		nether_link = new NetherLink("nether_link");
 	}
 	
-	public static void registerItem(){
+	private static void registerItem() {
 		GameRegistry.registerItem(nether_link, nether_link.getUnlocalizedName().substring(5));
 	}
 	
-	public static void registerRenders(){
+	public static void registerRenders() {
 		registerRender(nether_link);
 	}
 	
-	public static void registerRender(Item item){
+	public static void registerRender(Item item) {
 		ModelResourceLocation loc = new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory");
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, loc);			
 	}
-
 }

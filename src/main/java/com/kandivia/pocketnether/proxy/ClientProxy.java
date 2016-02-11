@@ -1,11 +1,11 @@
 package com.kandivia.pocketnether.proxy;
 
-import com.kandivia.pocketnether.init.RegisterBlocks;
-import com.kandivia.pocketnether.init.RegisterItems;
+import com.kandivia.pocketnether.blocks.RegisterBlocks;
+import com.kandivia.pocketnether.items.RegisterItems;
 
-public class ClientProxy extends CommonProxy{
+public class ClientProxy extends CommonProxy {
 	@Override
-	public void registerRenders(){
+	public void registerRenders() {
 		RegisterItems.registerRenders();
 		RegisterBlocks.registerRenders();
 	}

@@ -7,12 +7,13 @@ import com.kandivia.pocketnether.main.Reference;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 
-public class ConfigHandler {
-		
-	public static void init(File configFile){
-		Configuration config = new Configuration(configFile);			
-		try{
+public class ConfigReader {
+	
+	public static void init(File configFile) {
+		Configuration config = new Configuration(configFile);		
+		try {
 			config.load();
+			
 		//General Config
 			Property altLinkProp = config.get("General", "enableAltLinkRecipe", false);
 			altLinkProp.comment = "Set this to true to have the Pocket Nether Link recipe use eight Obsidian instead of four.";
@@ -47,9 +48,9 @@ public class ConfigHandler {
 			maxYProp.comment = "Maximum Y-Level for Quartz Ore to spawn.";
 			Reference.maxY = maxYProp.getInt(30);
 			
-		} catch (Exception e){
+		} catch(Exception e) {
 			System.out.println("PocketNether: Failed to Load Config File!");			
-		}finally{
+		} finally {
 			config.save();
 		}				
 	}

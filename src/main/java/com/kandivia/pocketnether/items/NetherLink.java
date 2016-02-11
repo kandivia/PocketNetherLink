@@ -7,12 +7,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class NetherLink extends Item {
-	public NetherLink(){
+	public NetherLink(String name) {
 		super();
 		this.maxStackSize = 1;
 		this.setMaxDamage(Reference.netherLinkDurability);
 		this.setNoRepair();
-		this.setUnlocalizedName("nether_link");
-		this.setCreativeTab(MainRegistry.nLinkTab);
+		this.setUnlocalizedName(name);
+		this.setCreativeTab(MainRegistry.PNTab);
 	}
 }

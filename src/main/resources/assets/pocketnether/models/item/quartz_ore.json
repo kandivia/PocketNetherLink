@@ -1,5 +1,5 @@
 {
-    "parent": "pocketnether:block/overworld_quartz_ore",
+    "parent": "pocketnether:block/quartz_ore",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
